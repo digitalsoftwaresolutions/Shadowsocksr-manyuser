@@ -8,7 +8,6 @@ services:
     ports : 
       - '10080:1080'
     environment: 
-      SERVER_PORT : '1080'
       PASSWORD : 'password'
       METHOD: 'aes-128-ctr'
       PROTOCOL: 'auth_aes128_md5'
