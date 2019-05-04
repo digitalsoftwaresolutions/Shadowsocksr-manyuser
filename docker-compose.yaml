@@ -1,0 +1,17 @@
+version : '3'
+services:
+  shadowsocksr:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: always
+    ports : 
+      - '10080:1080'
+    environment: 
+      SERVER_PORT : '1080'
+      PASSWORD : 'password'
+      METHOD: 'aes-128-ctr'
+      PROTOCOL: 'auth_aes128_md5'
+      PROTOCOLPARAM: '32'
+      OBFS: 'tls1.2_ticket_auth_compatible'
+      TIMEOUT: '600'
