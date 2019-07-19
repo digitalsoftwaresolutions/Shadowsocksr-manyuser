@@ -14,3 +14,8 @@ services:
       PROTOCOLPARAM: '32'
       OBFS: 'tls1.2_ticket_auth_compatible'
       TIMEOUT: '600'
+    ulimits:
+      nofile:
+        soft: "-1"
+        hard: "-1"
+      
