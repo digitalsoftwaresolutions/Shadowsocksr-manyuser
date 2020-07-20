@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk --update add wget python libsodium unzip
+RUN apk --update add wget python2 libsodium unzip
 
 WORKDIR /shadowsocksr
 
