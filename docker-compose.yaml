@@ -5,6 +5,11 @@ services:
       dockerfile: Dockerfile
       context: .
     restart: always
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 1024000
+        hard: 1024000
     ports : 
       - '10080:1080'
     environment: 
